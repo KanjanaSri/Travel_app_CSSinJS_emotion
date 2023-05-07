@@ -1,21 +1,31 @@
 // create and export styled components along with the animation and theming
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 export const theme = {
     colors: {
-      primary: "#03045e",
-      secondary: "#caf0f8",
-      tertiary: "#023e8a",
-      quaternary: "#fff",
+        primary: "#03045e",
+        secondary: "#caf0f8",
+        tertiary: "#023e8a",
+        quaternary: "#fff",
     },
     fonts: {
-      primary: "helvetica",
+        primary: "helvetica",
     },
     fontSize: {
-      primary: "20px",
-      secondary: "14px",
+        primary: "20px",
+        secondary: "14px",
     },
-  };
+};
+
+export const LogoSpin = keyframes`
+from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const CardWrapper = styled.div`
   width: 250px;
